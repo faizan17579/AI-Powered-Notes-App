@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    esmExternals: false,
+  },
+  webpack: (config) => {
+    return config;
+  },
 };
 
 export default nextConfig;
